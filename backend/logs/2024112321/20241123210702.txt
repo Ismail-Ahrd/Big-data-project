@@ -1,0 +1,6 @@
+2024/11/23 21:07:02|mouse out|Mens Cotton Jacket|1|55.99|products
+2024/11/23 21:07:02|hover|White Gold Plated Princess|1|9.99|products
+2024/11/23 21:07:02|mouse out|White Gold Plated Princess|1|9.99|products
+2024/11/23 21:07:02|hover|Solid Gold Petite Micropave |1|168|products
+2024/11/23 21:07:02|mouse out|Solid Gold Petite Micropave |1|168|products
+2024/11/23 21:07:02|hover|Mens Casual Premium Slim Fit T-Shirts |1|22.3|products

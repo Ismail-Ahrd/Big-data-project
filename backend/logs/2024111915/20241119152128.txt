@@ -1,0 +1,2 @@
+2024/11/19 15:21:28|hover|Mens Casual Slim Fit|1|15.99|products
+2024/11/19 15:21:28|mouse out|Mens Casual Slim Fit|1|15.99|products

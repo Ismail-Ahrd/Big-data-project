@@ -1,0 +1,3 @@
+2024/11/19 16:00:28|mouse out|White Gold Plated Princess|1|9.99|products
+2024/11/19 16:00:28|hover|Mens Cotton Jacket|1|55.99|products
+2024/11/19 16:00:28|buy|Mens Cotton Jacket|1|55.99|products

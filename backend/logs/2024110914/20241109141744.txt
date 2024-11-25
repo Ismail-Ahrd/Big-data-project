@@ -1,0 +1,5 @@
+2024/11/09 14:17:44|hover|Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin|1|599|products
+2024/11/09 14:17:44|mouse out|Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin|1|599|products
+2024/11/09 14:17:44|hover|Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED |1|999.99|products
+2024/11/09 14:17:44|mouse out|Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED |1|999.99|products
+2024/11/09 14:17:44|hover|Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED |1|999.99|products

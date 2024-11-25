@@ -1,0 +1,7 @@
+2024/11/19 16:00:22|hover|Mens Cotton Jacket|1|55.99|products
+2024/11/19 16:00:22|mouse out|Mens Cotton Jacket|1|55.99|products
+2024/11/19 16:00:22|hover|Mens Casual Premium Slim Fit T-Shirts |1|22.3|products
+2024/11/19 16:00:22|mouse out|Mens Casual Premium Slim Fit T-Shirts |1|22.3|products
+2024/11/19 16:00:22|hover|Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops|1|109.95|products
+2024/11/19 16:00:22|mouse out|Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops|1|109.95|products
+2024/11/19 16:00:22|hover|Mens Casual Premium Slim Fit T-Shirts |1|22.3|products

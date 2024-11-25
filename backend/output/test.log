@@ -1,0 +1,753 @@
+[38;5;6mspark [38;5;5m11:20:10.01 [0m[38;5;2mINFO [0m ==> 
+[38;5;6mspark [38;5;5m11:20:10.01 [0m[38;5;2mINFO [0m ==> [1mWelcome to the Bitnami spark container[0m
+[38;5;6mspark [38;5;5m11:20:10.02 [0m[38;5;2mINFO [0m ==> Subscribe to project updates by watching [1mhttps://github.com/bitnami/containers[0m
+[38;5;6mspark [38;5;5m11:20:10.02 [0m[38;5;2mINFO [0m ==> Submit issues and feature requests at [1mhttps://github.com/bitnami/containers/issues[0m
+[38;5;6mspark [38;5;5m11:20:10.02 [0m[38;5;2mINFO [0m ==> Upgrade to Tanzu Application Catalog for production environments to access custom-configured and pre-packaged software components. Gain enhanced features, including Software Bill of Materials (SBOM), CVE scan result reports, and VEX documents. To learn more, visit [1mhttps://bitnami.com/enterprise[0m
+[38;5;6mspark [38;5;5m11:20:10.02 [0m[38;5;2mINFO [0m ==> 
+
+24/11/09 11:20:14 INFO SparkContext: Running Spark version 3.5.3
+24/11/09 11:20:14 INFO SparkContext: OS info Linux, 6.8.0-47-generic, amd64
+24/11/09 11:20:14 INFO SparkContext: Java version 17.0.13
+24/11/09 11:20:14 INFO ResourceUtils: ==============================================================
+24/11/09 11:20:14 INFO ResourceUtils: No custom resources configured for spark.driver.
+24/11/09 11:20:14 INFO ResourceUtils: ==============================================================
+24/11/09 11:20:14 INFO SparkContext: Submitted application: SalesAggregation
+24/11/09 11:20:14 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+24/11/09 11:20:14 INFO ResourceProfile: Limiting resource is cpu
+24/11/09 11:20:14 INFO ResourceProfileManager: Added ResourceProfile id: 0
+24/11/09 11:20:14 INFO SecurityManager: Changing view acls to: spark
+24/11/09 11:20:14 INFO SecurityManager: Changing modify acls to: spark
+24/11/09 11:20:14 INFO SecurityManager: Changing view acls groups to: 
+24/11/09 11:20:14 INFO SecurityManager: Changing modify acls groups to: 
+24/11/09 11:20:14 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: spark; groups with view permissions: EMPTY; users with modify permissions: spark; groups with modify permissions: EMPTY
+24/11/09 11:20:14 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+24/11/09 11:20:15 INFO Utils: Successfully started service 'sparkDriver' on port 45171.
+24/11/09 11:20:15 INFO SparkEnv: Registering MapOutputTracker
+24/11/09 11:20:15 INFO SparkEnv: Registering BlockManagerMaster
+24/11/09 11:20:15 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+24/11/09 11:20:15 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+24/11/09 11:20:15 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+24/11/09 11:20:15 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-4c3e423a-4dab-4f1d-87a5-ed015784adab
+24/11/09 11:20:15 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+24/11/09 11:20:15 INFO SparkEnv: Registering OutputCommitCoordinator
+24/11/09 11:20:15 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+24/11/09 11:20:15 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+24/11/09 11:20:16 INFO Executor: Starting executor ID driver on host 38e757416d68
+24/11/09 11:20:16 INFO Executor: OS info Linux, 6.8.0-47-generic, amd64
+24/11/09 11:20:16 INFO Executor: Java version 17.0.13
+24/11/09 11:20:16 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+24/11/09 11:20:16 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@50f36a3b for default.
+24/11/09 11:20:16 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 34515.
+24/11/09 11:20:16 INFO NettyBlockTransferService: Server created on 38e757416d68:34515
+24/11/09 11:20:16 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+24/11/09 11:20:16 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 38e757416d68, 34515, None)
+24/11/09 11:20:16 INFO BlockManagerMasterEndpoint: Registering block manager 38e757416d68:34515 with 434.4 MiB RAM, BlockManagerId(driver, 38e757416d68, 34515, None)
+24/11/09 11:20:16 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 38e757416d68, 34515, None)
+24/11/09 11:20:16 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 38e757416d68, 34515, None)
+Found log files: ['/app/logs/2024110911/20241109115443.txt', '/app/logs/2024110911/20241109115430.txt', '/app/logs/2024110911/20241109115441.txt', '/app/logs/2024110911/20241109115428.txt', '/app/logs/2024110911/20241109115440.txt', '/app/logs/2024110911/20241109115439.txt', '/app/logs/2024110911/20241109115435.txt', '/app/logs/2024110911/20241109115431.txt', '/app/logs/2024110911/20241109115434.txt', '/app/logs/2024110911/20241109115444.txt', '/app/logs/2024110911/20241109115442.txt', '/app/logs/2024110911/20241109115436.txt', '/app/logs/2024110911/20241109115438.txt', '/app/logs/2024110911/20241109115426.txt', '/app/logs/2024110911/20241109115432.txt', '/app/logs/2024110911/20241109115433.txt', '/app/logs/2024110911/20241109115425.txt', '/app/logs/2024110911/20241109115429.txt', '/app/logs/2024110911/20241109115437.txt', '/app/logs/2024110911/20241109115427.txt']
+24/11/09 11:20:16 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+24/11/09 11:20:16 INFO SharedState: Warehouse path is 'file:/opt/bitnami/spark/spark-warehouse'.
+24/11/09 11:20:18 INFO InMemoryFileIndex: It took 95 ms to list leaf files for 20 paths.
+Showing a few rows of the raw log data:
+24/11/09 11:20:19 INFO FileSourceStrategy: Pushed Filters: 
+24/11/09 11:20:19 INFO FileSourceStrategy: Post-Scan Filters: 
+24/11/09 11:20:20 INFO CodeGenerator: Code generated in 300.726368 ms
+24/11/09 11:20:20 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 199.4 KiB, free 434.2 MiB)
+24/11/09 11:20:20 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 34.2 KiB, free 434.2 MiB)
+24/11/09 11:20:20 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 38e757416d68:34515 (size: 34.2 KiB, free: 434.4 MiB)
+24/11/09 11:20:20 INFO SparkContext: Created broadcast 0 from showString at NativeMethodAccessorImpl.java:0
+24/11/09 11:20:20 INFO FileSourceScanExec: Planning scan with bin packing, max size: 20974749 bytes, open cost is considered as scanning 4194304 bytes.
+24/11/09 11:20:20 INFO SparkContext: Starting job: showString at NativeMethodAccessorImpl.java:0
+24/11/09 11:20:20 INFO DAGScheduler: Got job 0 (showString at NativeMethodAccessorImpl.java:0) with 1 output partitions
+24/11/09 11:20:20 INFO DAGScheduler: Final stage: ResultStage 0 (showString at NativeMethodAccessorImpl.java:0)
+24/11/09 11:20:20 INFO DAGScheduler: Parents of final stage: List()
+24/11/09 11:20:20 INFO DAGScheduler: Missing parents: List()
+24/11/09 11:20:20 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[3] at showString at NativeMethodAccessorImpl.java:0), which has no missing parents
+24/11/09 11:20:21 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 12.8 KiB, free 434.2 MiB)
+24/11/09 11:20:21 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 6.1 KiB, free 434.2 MiB)
+24/11/09 11:20:21 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on 38e757416d68:34515 (size: 6.1 KiB, free: 434.4 MiB)
+24/11/09 11:20:21 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1585
+24/11/09 11:20:21 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[3] at showString at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+24/11/09 11:20:21 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks resource profile 0
+24/11/09 11:20:21 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (38e757416d68, executor driver, partition 0, PROCESS_LOCAL, 10020 bytes) 
+24/11/09 11:20:21 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+24/11/09 11:20:21 INFO CodeGenerator: Code generated in 22.595232 ms
+24/11/09 11:20:21 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115442.txt, range: 0-2441, partition values: [empty row]
+24/11/09 11:20:21 INFO CodeGenerator: Code generated in 21.095843 ms
+24/11/09 11:20:21 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 1999 bytes result sent to driver
+24/11/09 11:20:21 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 406 ms on 38e757416d68 (executor driver) (1/1)
+24/11/09 11:20:21 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+24/11/09 11:20:21 INFO DAGScheduler: ResultStage 0 (showString at NativeMethodAccessorImpl.java:0) finished in 0.609 s
+24/11/09 11:20:21 INFO DAGScheduler: Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+24/11/09 11:20:21 INFO TaskSchedulerImpl: Killing all running tasks in stage 0: Stage finished
+24/11/09 11:20:21 INFO DAGScheduler: Job 0 finished: showString at NativeMethodAccessorImpl.java:0, took 0.674081 s
+24/11/09 11:20:22 INFO BlockManagerInfo: Removed broadcast_1_piece0 on 38e757416d68:34515 in memory (size: 6.1 KiB, free: 434.4 MiB)
+24/11/09 11:20:22 INFO CodeGenerator: Code generated in 24.383162 ms
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+|value                                                                                                                                            |
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+|2024/11/09 11:54:42|mouse out|Mens Casual Premium Slim Fit T-Shirts |1|22.3|products                                                             |
+|2024/11/09 11:54:42|hover|MBJ Women's Solid Short Sleeve Boat Neck V |1|9.85|products                                                            |
+|2024/11/09 11:54:42|mouse out|MBJ Women's Solid Short Sleeve Boat Neck V |1|9.85|products                                                        |
+|2024/11/09 11:54:42|hover|Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED |1|999.99|products    |
+|2024/11/09 11:54:42|mouse out|Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED |1|999.99|products|
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+only showing top 5 rows
+
+Showing a few rows of the parsed data:
+24/11/09 11:20:23 INFO FileSourceStrategy: Pushed Filters: 
+24/11/09 11:20:23 INFO FileSourceStrategy: Post-Scan Filters: 
+24/11/09 11:20:23 INFO CodeGenerator: Code generated in 29.281834 ms
+24/11/09 11:20:23 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 199.4 KiB, free 434.0 MiB)
+24/11/09 11:20:23 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 34.2 KiB, free 433.9 MiB)
+24/11/09 11:20:23 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on 38e757416d68:34515 (size: 34.2 KiB, free: 434.3 MiB)
+24/11/09 11:20:23 INFO SparkContext: Created broadcast 2 from showString at NativeMethodAccessorImpl.java:0
+24/11/09 11:20:23 INFO FileSourceScanExec: Planning scan with bin packing, max size: 20974749 bytes, open cost is considered as scanning 4194304 bytes.
+24/11/09 11:20:23 INFO SparkContext: Starting job: showString at NativeMethodAccessorImpl.java:0
+24/11/09 11:20:23 INFO DAGScheduler: Got job 1 (showString at NativeMethodAccessorImpl.java:0) with 1 output partitions
+24/11/09 11:20:23 INFO DAGScheduler: Final stage: ResultStage 1 (showString at NativeMethodAccessorImpl.java:0)
+24/11/09 11:20:23 INFO DAGScheduler: Parents of final stage: List()
+24/11/09 11:20:23 INFO DAGScheduler: Missing parents: List()
+24/11/09 11:20:23 INFO DAGScheduler: Submitting ResultStage 1 (MapPartitionsRDD[7] at showString at NativeMethodAccessorImpl.java:0), which has no missing parents
+24/11/09 11:20:23 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 15.1 KiB, free 433.9 MiB)
+24/11/09 11:20:23 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 7.1 KiB, free 433.9 MiB)
+24/11/09 11:20:23 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on 38e757416d68:34515 (size: 7.1 KiB, free: 434.3 MiB)
+24/11/09 11:20:23 INFO SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:1585
+24/11/09 11:20:23 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 1 (MapPartitionsRDD[7] at showString at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+24/11/09 11:20:23 INFO TaskSchedulerImpl: Adding task set 1.0 with 1 tasks resource profile 0
+24/11/09 11:20:23 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 1) (38e757416d68, executor driver, partition 0, PROCESS_LOCAL, 10020 bytes) 
+24/11/09 11:20:23 INFO Executor: Running task 0.0 in stage 1.0 (TID 1)
+24/11/09 11:20:23 INFO CodeGenerator: Code generated in 29.705622 ms
+24/11/09 11:20:23 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115442.txt, range: 0-2441, partition values: [empty row]
+24/11/09 11:20:23 INFO Executor: Finished task 0.0 in stage 1.0 (TID 1). 1951 bytes result sent to driver
+24/11/09 11:20:23 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 1) in 98 ms on 38e757416d68 (executor driver) (1/1)
+24/11/09 11:20:23 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+24/11/09 11:20:23 INFO DAGScheduler: ResultStage 1 (showString at NativeMethodAccessorImpl.java:0) finished in 0.116 s
+24/11/09 11:20:23 INFO DAGScheduler: Job 1 is finished. Cancelling potential speculative or zombie tasks for this job
+24/11/09 11:20:23 INFO TaskSchedulerImpl: Killing all running tasks in stage 1: Stage finished
+24/11/09 11:20:23 INFO DAGScheduler: Job 1 finished: showString at NativeMethodAccessorImpl.java:0, took 0.126571 s
+24/11/09 11:20:23 INFO CodeGenerator: Code generated in 18.217934 ms
++-------------------+----------------------------------------------------------------------------------------------------+
+|timestamp          |log_data                                                                                            |
++-------------------+----------------------------------------------------------------------------------------------------+
+|2024-11-09 11:54:42|mouse out|Mens Casual Premium Slim Fit T-Shirts |1|22.3|products                                    |
+|2024-11-09 11:54:42|hover|MBJ Women's Solid Short Sleeve Boat Neck V |1|9.85|products                                   |
+|2024-11-09 11:54:42|mouse out|MBJ Women's Solid Short Sleeve Boat Neck V |1|9.85|products                               |
+|2024-11-09 11:54:42|hover|Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QL|
+|2024-11-09 11:54:42|mouse out|Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Scree|
++-------------------+----------------------------------------------------------------------------------------------------+
+only showing top 5 rows
+
+24/11/09 11:20:23 INFO BlockManagerInfo: Removed broadcast_0_piece0 on 38e757416d68:34515 in memory (size: 34.2 KiB, free: 434.4 MiB)
+Showing a few rows of the split data:
+24/11/09 11:20:23 INFO FileSourceStrategy: Pushed Filters: 
+24/11/09 11:20:23 INFO FileSourceStrategy: Post-Scan Filters: 
+24/11/09 11:20:23 INFO CodeGenerator: Code generated in 62.570033 ms
+24/11/09 11:20:23 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 199.4 KiB, free 434.0 MiB)
+24/11/09 11:20:24 INFO BlockManagerInfo: Removed broadcast_2_piece0 on 38e757416d68:34515 in memory (size: 34.2 KiB, free: 434.4 MiB)
+24/11/09 11:20:24 INFO BlockManagerInfo: Removed broadcast_3_piece0 on 38e757416d68:34515 in memory (size: 7.1 KiB, free: 434.4 MiB)
+24/11/09 11:20:24 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 34.2 KiB, free 434.2 MiB)
+24/11/09 11:20:24 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on 38e757416d68:34515 (size: 34.2 KiB, free: 434.4 MiB)
+24/11/09 11:20:24 INFO SparkContext: Created broadcast 4 from showString at NativeMethodAccessorImpl.java:0
+24/11/09 11:20:24 INFO FileSourceScanExec: Planning scan with bin packing, max size: 20974749 bytes, open cost is considered as scanning 4194304 bytes.
+24/11/09 11:20:24 INFO SparkContext: Starting job: showString at NativeMethodAccessorImpl.java:0
+24/11/09 11:20:24 INFO DAGScheduler: Got job 2 (showString at NativeMethodAccessorImpl.java:0) with 1 output partitions
+24/11/09 11:20:24 INFO DAGScheduler: Final stage: ResultStage 2 (showString at NativeMethodAccessorImpl.java:0)
+24/11/09 11:20:24 INFO DAGScheduler: Parents of final stage: List()
+24/11/09 11:20:24 INFO DAGScheduler: Missing parents: List()
+24/11/09 11:20:24 INFO DAGScheduler: Submitting ResultStage 2 (MapPartitionsRDD[11] at showString at NativeMethodAccessorImpl.java:0), which has no missing parents
+24/11/09 11:20:24 INFO MemoryStore: Block broadcast_5 stored as values in memory (estimated size 19.4 KiB, free 434.2 MiB)
+24/11/09 11:20:24 INFO MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 8.2 KiB, free 434.1 MiB)
+24/11/09 11:20:24 INFO BlockManagerInfo: Added broadcast_5_piece0 in memory on 38e757416d68:34515 (size: 8.2 KiB, free: 434.4 MiB)
+24/11/09 11:20:24 INFO SparkContext: Created broadcast 5 from broadcast at DAGScheduler.scala:1585
+24/11/09 11:20:24 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 2 (MapPartitionsRDD[11] at showString at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+24/11/09 11:20:24 INFO TaskSchedulerImpl: Adding task set 2.0 with 1 tasks resource profile 0
+24/11/09 11:20:24 INFO TaskSetManager: Starting task 0.0 in stage 2.0 (TID 2) (38e757416d68, executor driver, partition 0, PROCESS_LOCAL, 10020 bytes) 
+24/11/09 11:20:24 INFO Executor: Running task 0.0 in stage 2.0 (TID 2)
+24/11/09 11:20:24 INFO CodeGenerator: Code generated in 52.307442 ms
+24/11/09 11:20:24 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115442.txt, range: 0-2441, partition values: [empty row]
+24/11/09 11:20:24 INFO Executor: Finished task 0.0 in stage 2.0 (TID 2). 2264 bytes result sent to driver
+24/11/09 11:20:24 INFO TaskSetManager: Finished task 0.0 in stage 2.0 (TID 2) in 121 ms on 38e757416d68 (executor driver) (1/1)
+24/11/09 11:20:24 INFO TaskSchedulerImpl: Removed TaskSet 2.0, whose tasks have all completed, from pool 
+24/11/09 11:20:24 INFO DAGScheduler: ResultStage 2 (showString at NativeMethodAccessorImpl.java:0) finished in 0.175 s
+24/11/09 11:20:24 INFO DAGScheduler: Job 2 is finished. Cancelling potential speculative or zombie tasks for this job
+24/11/09 11:20:24 INFO TaskSchedulerImpl: Killing all running tasks in stage 2: Stage finished
+24/11/09 11:20:24 INFO DAGScheduler: Job 2 finished: showString at NativeMethodAccessorImpl.java:0, took 0.188766 s
+24/11/09 11:20:24 INFO CodeGenerator: Code generated in 30.866543 ms
++-------------------+----------------------------------------------------------------------------------------------------+---------+----------------------------------------------------------------------------------------------+--------+-----+--------+
+|timestamp          |log_data                                                                                            |action   |product                                                                                       |quantity|price|route   |
++-------------------+----------------------------------------------------------------------------------------------------+---------+----------------------------------------------------------------------------------------------+--------+-----+--------+
+|2024-11-09 11:54:42|mouse out|Mens Casual Premium Slim Fit T-Shirts |1|22.3|products                                    |mouse out|Mens Casual Premium Slim Fit T-Shirts                                                         |1       |22.3 |products|
+|2024-11-09 11:54:42|hover|MBJ Women's Solid Short Sleeve Boat Neck V |1|9.85|products                                   |hover    |MBJ Women's Solid Short Sleeve Boat Neck V                                                    |1       |9.85 |products|
+|2024-11-09 11:54:42|mouse out|MBJ Women's Solid Short Sleeve Boat Neck V |1|9.85|products                               |mouse out|MBJ Women's Solid Short Sleeve Boat Neck V                                                    |1       |9.85 |products|
+|2024-11-09 11:54:42|hover|Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QL|hover    |Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QL|NULL    |NULL |NULL    |
+|2024-11-09 11:54:42|mouse out|Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Scree|mouse out|Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Scree    |NULL    |NULL |NULL    |
++-------------------+----------------------------------------------------------------------------------------------------+---------+----------------------------------------------------------------------------------------------+--------+-----+--------+
+only showing top 5 rows
+
+Showing a few rows of the filtered data (action == 'buy'):
+24/11/09 11:20:24 INFO FileSourceStrategy: Pushed Filters: IsNotNull(value)
+24/11/09 11:20:24 INFO FileSourceStrategy: Post-Scan Filters: isnotnull(value#0),(split(substring(value#0, 21, 100), \|, -1)[0] = buy)
+24/11/09 11:20:24 INFO CodeGenerator: Code generated in 42.133415 ms
+24/11/09 11:20:24 INFO MemoryStore: Block broadcast_6 stored as values in memory (estimated size 199.4 KiB, free 434.0 MiB)
+24/11/09 11:20:24 INFO MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 34.2 KiB, free 433.9 MiB)
+24/11/09 11:20:24 INFO BlockManagerInfo: Added broadcast_6_piece0 in memory on 38e757416d68:34515 (size: 34.2 KiB, free: 434.3 MiB)
+24/11/09 11:20:24 INFO SparkContext: Created broadcast 6 from showString at NativeMethodAccessorImpl.java:0
+24/11/09 11:20:24 INFO BlockManagerInfo: Removed broadcast_5_piece0 on 38e757416d68:34515 in memory (size: 8.2 KiB, free: 434.3 MiB)
+24/11/09 11:20:24 INFO FileSourceScanExec: Planning scan with bin packing, max size: 20974749 bytes, open cost is considered as scanning 4194304 bytes.
+24/11/09 11:20:24 INFO BlockManagerInfo: Removed broadcast_4_piece0 on 38e757416d68:34515 in memory (size: 34.2 KiB, free: 434.4 MiB)
+24/11/09 11:20:24 INFO SparkContext: Starting job: showString at NativeMethodAccessorImpl.java:0
+24/11/09 11:20:24 INFO DAGScheduler: Got job 3 (showString at NativeMethodAccessorImpl.java:0) with 1 output partitions
+24/11/09 11:20:24 INFO DAGScheduler: Final stage: ResultStage 3 (showString at NativeMethodAccessorImpl.java:0)
+24/11/09 11:20:24 INFO DAGScheduler: Parents of final stage: List()
+24/11/09 11:20:24 INFO DAGScheduler: Missing parents: List()
+24/11/09 11:20:24 INFO DAGScheduler: Submitting ResultStage 3 (MapPartitionsRDD[15] at showString at NativeMethodAccessorImpl.java:0), which has no missing parents
+24/11/09 11:20:24 INFO MemoryStore: Block broadcast_7 stored as values in memory (estimated size 20.4 KiB, free 434.2 MiB)
+24/11/09 11:20:24 INFO MemoryStore: Block broadcast_7_piece0 stored as bytes in memory (estimated size 8.6 KiB, free 434.1 MiB)
+24/11/09 11:20:24 INFO BlockManagerInfo: Added broadcast_7_piece0 in memory on 38e757416d68:34515 (size: 8.6 KiB, free: 434.4 MiB)
+24/11/09 11:20:24 INFO SparkContext: Created broadcast 7 from broadcast at DAGScheduler.scala:1585
+24/11/09 11:20:24 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 3 (MapPartitionsRDD[15] at showString at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+24/11/09 11:20:24 INFO TaskSchedulerImpl: Adding task set 3.0 with 1 tasks resource profile 0
+24/11/09 11:20:24 INFO TaskSetManager: Starting task 0.0 in stage 3.0 (TID 3) (38e757416d68, executor driver, partition 0, PROCESS_LOCAL, 10020 bytes) 
+24/11/09 11:20:24 INFO Executor: Running task 0.0 in stage 3.0 (TID 3)
+24/11/09 11:20:24 INFO CodeGenerator: Code generated in 60.347588 ms
+24/11/09 11:20:24 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115442.txt, range: 0-2441, partition values: [empty row]
+24/11/09 11:20:24 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115443.txt, range: 0-2293, partition values: [empty row]
+24/11/09 11:20:24 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115438.txt, range: 0-1761, partition values: [empty row]
+24/11/09 11:20:24 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115444.txt, range: 0-1533, partition values: [empty row]
+24/11/09 11:20:24 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115437.txt, range: 0-1501, partition values: [empty row]
+24/11/09 11:20:24 INFO Executor: Finished task 0.0 in stage 3.0 (TID 3). 1594 bytes result sent to driver
+24/11/09 11:20:24 INFO TaskSetManager: Finished task 0.0 in stage 3.0 (TID 3) in 146 ms on 38e757416d68 (executor driver) (1/1)
+24/11/09 11:20:24 INFO TaskSchedulerImpl: Removed TaskSet 3.0, whose tasks have all completed, from pool 
+24/11/09 11:20:24 INFO DAGScheduler: ResultStage 3 (showString at NativeMethodAccessorImpl.java:0) finished in 0.182 s
+24/11/09 11:20:24 INFO DAGScheduler: Job 3 is finished. Cancelling potential speculative or zombie tasks for this job
+24/11/09 11:20:24 INFO TaskSchedulerImpl: Killing all running tasks in stage 3: Stage finished
+24/11/09 11:20:24 INFO DAGScheduler: Job 3 finished: showString at NativeMethodAccessorImpl.java:0, took 0.196196 s
+24/11/09 11:20:24 INFO SparkContext: Starting job: showString at NativeMethodAccessorImpl.java:0
+24/11/09 11:20:24 INFO DAGScheduler: Got job 4 (showString at NativeMethodAccessorImpl.java:0) with 3 output partitions
+24/11/09 11:20:24 INFO DAGScheduler: Final stage: ResultStage 4 (showString at NativeMethodAccessorImpl.java:0)
+24/11/09 11:20:24 INFO DAGScheduler: Parents of final stage: List()
+24/11/09 11:20:24 INFO DAGScheduler: Missing parents: List()
+24/11/09 11:20:24 INFO DAGScheduler: Submitting ResultStage 4 (MapPartitionsRDD[15] at showString at NativeMethodAccessorImpl.java:0), which has no missing parents
+24/11/09 11:20:24 INFO MemoryStore: Block broadcast_8 stored as values in memory (estimated size 20.4 KiB, free 434.1 MiB)
+24/11/09 11:20:24 INFO MemoryStore: Block broadcast_8_piece0 stored as bytes in memory (estimated size 8.6 KiB, free 434.1 MiB)
+24/11/09 11:20:24 INFO BlockManagerInfo: Added broadcast_8_piece0 in memory on 38e757416d68:34515 (size: 8.6 KiB, free: 434.3 MiB)
+24/11/09 11:20:24 INFO SparkContext: Created broadcast 8 from broadcast at DAGScheduler.scala:1585
+24/11/09 11:20:24 INFO DAGScheduler: Submitting 3 missing tasks from ResultStage 4 (MapPartitionsRDD[15] at showString at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(1, 2, 3))
+24/11/09 11:20:24 INFO TaskSchedulerImpl: Adding task set 4.0 with 3 tasks resource profile 0
+24/11/09 11:20:24 INFO TaskSetManager: Starting task 0.0 in stage 4.0 (TID 4) (38e757416d68, executor driver, partition 1, PROCESS_LOCAL, 10123 bytes) 
+24/11/09 11:20:24 INFO TaskSetManager: Starting task 1.0 in stage 4.0 (TID 5) (38e757416d68, executor driver, partition 2, PROCESS_LOCAL, 10123 bytes) 
+24/11/09 11:20:24 INFO TaskSetManager: Starting task 2.0 in stage 4.0 (TID 6) (38e757416d68, executor driver, partition 3, PROCESS_LOCAL, 9814 bytes) 
+24/11/09 11:20:24 INFO Executor: Running task 0.0 in stage 4.0 (TID 4)
+24/11/09 11:20:24 INFO Executor: Running task 1.0 in stage 4.0 (TID 5)
+24/11/09 11:20:25 INFO Executor: Running task 2.0 in stage 4.0 (TID 6)
+24/11/09 11:20:25 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115425.txt, range: 0-575, partition values: [empty row]
+24/11/09 11:20:25 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115434.txt, range: 0-219, partition values: [empty row]
+24/11/09 11:20:25 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115430.txt, range: 0-74, partition values: [empty row]
+24/11/09 11:20:25 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115429.txt, range: 0-74, partition values: [empty row]
+24/11/09 11:20:25 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115439.txt, range: 0-142, partition values: [empty row]
+24/11/09 11:20:25 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115426.txt, range: 0-549, partition values: [empty row]
+24/11/09 11:20:25 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115431.txt, range: 0-98, partition values: [empty row]
+24/11/09 11:20:25 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115440.txt, range: 0-444, partition values: [empty row]
+24/11/09 11:20:25 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115428.txt, range: 0-68, partition values: [empty row]
+24/11/09 11:20:25 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115436.txt, range: 0-98, partition values: [empty row]
+24/11/09 11:20:25 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115433.txt, range: 0-98, partition values: [empty row]
+24/11/09 11:20:25 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115427.txt, range: 0-338, partition values: [empty row]
+24/11/09 11:20:25 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115432.txt, range: 0-96, partition values: [empty row]
+24/11/09 11:20:25 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115441.txt, range: 0-281, partition values: [empty row]
+24/11/09 11:20:25 INFO Executor: Finished task 2.0 in stage 4.0 (TID 6). 1798 bytes result sent to driver
+24/11/09 11:20:25 INFO TaskSetManager: Finished task 2.0 in stage 4.0 (TID 6) in 109 ms on 38e757416d68 (executor driver) (1/3)
+24/11/09 11:20:25 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115435.txt, range: 0-236, partition values: [empty row]
+24/11/09 11:20:25 INFO Executor: Finished task 1.0 in stage 4.0 (TID 5). 1963 bytes result sent to driver
+24/11/09 11:20:25 INFO TaskSetManager: Finished task 1.0 in stage 4.0 (TID 5) in 128 ms on 38e757416d68 (executor driver) (2/3)
+24/11/09 11:20:25 INFO Executor: Finished task 0.0 in stage 4.0 (TID 4). 2005 bytes result sent to driver
+24/11/09 11:20:25 INFO TaskSetManager: Finished task 0.0 in stage 4.0 (TID 4) in 135 ms on 38e757416d68 (executor driver) (3/3)
+24/11/09 11:20:25 INFO TaskSchedulerImpl: Removed TaskSet 4.0, whose tasks have all completed, from pool 
+24/11/09 11:20:25 INFO DAGScheduler: ResultStage 4 (showString at NativeMethodAccessorImpl.java:0) finished in 0.155 s
+24/11/09 11:20:25 INFO DAGScheduler: Job 4 is finished. Cancelling potential speculative or zombie tasks for this job
+24/11/09 11:20:25 INFO TaskSchedulerImpl: Killing all running tasks in stage 4: Stage finished
+24/11/09 11:20:25 INFO DAGScheduler: Job 4 finished: showString at NativeMethodAccessorImpl.java:0, took 0.173254 s
++-------------------+----------------------------------------------------------------------------------------------------+------+------------------------------------------------------------------------------------------------+--------+-----+--------------+
+|timestamp          |log_data                                                                                            |action|product                                                                                         |quantity|price|route         |
++-------------------+----------------------------------------------------------------------------------------------------+------+------------------------------------------------------------------------------------------------+--------+-----+--------------+
+|2024-11-09 11:54:40|buy|Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED|buy   |Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED|NULL    |NULL |NULL          |
+|2024-11-09 11:54:40|buy|Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED|buy   |Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED|NULL    |NULL |NULL          |
+|2024-11-09 11:54:40|buy|Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED|buy   |Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED|NULL    |NULL |NULL          |
+|2024-11-09 11:54:35|buy|John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet|1|695|products      |buy   |John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet                     |1       |695.0|products      |
+|2024-11-09 11:54:35|buy|John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet|1|695|product-detail|buy   |John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet                     |1       |695.0|product-detail|
++-------------------+----------------------------------------------------------------------------------------------------+------+------------------------------------------------------------------------------------------------+--------+-----+--------------+
+only showing top 5 rows
+
+Showing a few rows of the data with the hour column:
+24/11/09 11:20:25 INFO FileSourceStrategy: Pushed Filters: IsNotNull(value)
+24/11/09 11:20:25 INFO FileSourceStrategy: Post-Scan Filters: isnotnull(value#0),(split(substring(value#0, 21, 100), \|, -1)[0] = buy)
+24/11/09 11:20:25 INFO CodeGenerator: Code generated in 50.673407 ms
+24/11/09 11:20:25 INFO MemoryStore: Block broadcast_9 stored as values in memory (estimated size 199.4 KiB, free 433.9 MiB)
+24/11/09 11:20:25 INFO BlockManagerInfo: Removed broadcast_6_piece0 on 38e757416d68:34515 in memory (size: 34.2 KiB, free: 434.4 MiB)
+24/11/09 11:20:25 INFO MemoryStore: Block broadcast_9_piece0 stored as bytes in memory (estimated size 34.2 KiB, free 434.1 MiB)
+24/11/09 11:20:25 INFO BlockManagerInfo: Removed broadcast_7_piece0 on 38e757416d68:34515 in memory (size: 8.6 KiB, free: 434.4 MiB)
+24/11/09 11:20:25 INFO BlockManagerInfo: Added broadcast_9_piece0 in memory on 38e757416d68:34515 (size: 34.2 KiB, free: 434.4 MiB)
+24/11/09 11:20:25 INFO SparkContext: Created broadcast 9 from showString at NativeMethodAccessorImpl.java:0
+24/11/09 11:20:25 INFO FileSourceScanExec: Planning scan with bin packing, max size: 20974749 bytes, open cost is considered as scanning 4194304 bytes.
+24/11/09 11:20:25 INFO BlockManagerInfo: Removed broadcast_8_piece0 on 38e757416d68:34515 in memory (size: 8.6 KiB, free: 434.4 MiB)
+24/11/09 11:20:25 INFO SparkContext: Starting job: showString at NativeMethodAccessorImpl.java:0
+24/11/09 11:20:25 INFO DAGScheduler: Got job 5 (showString at NativeMethodAccessorImpl.java:0) with 1 output partitions
+24/11/09 11:20:25 INFO DAGScheduler: Final stage: ResultStage 5 (showString at NativeMethodAccessorImpl.java:0)
+24/11/09 11:20:25 INFO DAGScheduler: Parents of final stage: List()
+24/11/09 11:20:25 INFO DAGScheduler: Missing parents: List()
+24/11/09 11:20:25 INFO DAGScheduler: Submitting ResultStage 5 (MapPartitionsRDD[19] at showString at NativeMethodAccessorImpl.java:0), which has no missing parents
+24/11/09 11:20:25 INFO MemoryStore: Block broadcast_10 stored as values in memory (estimated size 21.4 KiB, free 434.2 MiB)
+24/11/09 11:20:25 INFO MemoryStore: Block broadcast_10_piece0 stored as bytes in memory (estimated size 8.8 KiB, free 434.1 MiB)
+24/11/09 11:20:25 INFO BlockManagerInfo: Added broadcast_10_piece0 in memory on 38e757416d68:34515 (size: 8.8 KiB, free: 434.4 MiB)
+24/11/09 11:20:25 INFO SparkContext: Created broadcast 10 from broadcast at DAGScheduler.scala:1585
+24/11/09 11:20:25 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 5 (MapPartitionsRDD[19] at showString at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+24/11/09 11:20:25 INFO TaskSchedulerImpl: Adding task set 5.0 with 1 tasks resource profile 0
+24/11/09 11:20:25 INFO TaskSetManager: Starting task 0.0 in stage 5.0 (TID 7) (38e757416d68, executor driver, partition 0, PROCESS_LOCAL, 10020 bytes) 
+24/11/09 11:20:25 INFO Executor: Running task 0.0 in stage 5.0 (TID 7)
+24/11/09 11:20:25 INFO CodeGenerator: Code generated in 39.581268 ms
+24/11/09 11:20:25 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115442.txt, range: 0-2441, partition values: [empty row]
+24/11/09 11:20:25 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115443.txt, range: 0-2293, partition values: [empty row]
+24/11/09 11:20:25 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115438.txt, range: 0-1761, partition values: [empty row]
+24/11/09 11:20:25 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115444.txt, range: 0-1533, partition values: [empty row]
+24/11/09 11:20:25 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115437.txt, range: 0-1501, partition values: [empty row]
+24/11/09 11:20:25 INFO Executor: Finished task 0.0 in stage 5.0 (TID 7). 1594 bytes result sent to driver
+24/11/09 11:20:25 INFO TaskSetManager: Finished task 0.0 in stage 5.0 (TID 7) in 102 ms on 38e757416d68 (executor driver) (1/1)
+24/11/09 11:20:25 INFO TaskSchedulerImpl: Removed TaskSet 5.0, whose tasks have all completed, from pool 
+24/11/09 11:20:25 INFO DAGScheduler: ResultStage 5 (showString at NativeMethodAccessorImpl.java:0) finished in 0.128 s
+24/11/09 11:20:25 INFO DAGScheduler: Job 5 is finished. Cancelling potential speculative or zombie tasks for this job
+24/11/09 11:20:25 INFO TaskSchedulerImpl: Killing all running tasks in stage 5: Stage finished
+24/11/09 11:20:25 INFO DAGScheduler: Job 5 finished: showString at NativeMethodAccessorImpl.java:0, took 0.138133 s
+24/11/09 11:20:25 INFO SparkContext: Starting job: showString at NativeMethodAccessorImpl.java:0
+24/11/09 11:20:25 INFO DAGScheduler: Got job 6 (showString at NativeMethodAccessorImpl.java:0) with 3 output partitions
+24/11/09 11:20:25 INFO DAGScheduler: Final stage: ResultStage 6 (showString at NativeMethodAccessorImpl.java:0)
+24/11/09 11:20:25 INFO DAGScheduler: Parents of final stage: List()
+24/11/09 11:20:25 INFO DAGScheduler: Missing parents: List()
+24/11/09 11:20:25 INFO DAGScheduler: Submitting ResultStage 6 (MapPartitionsRDD[19] at showString at NativeMethodAccessorImpl.java:0), which has no missing parents
+24/11/09 11:20:25 INFO MemoryStore: Block broadcast_11 stored as values in memory (estimated size 21.4 KiB, free 434.1 MiB)
+24/11/09 11:20:25 INFO MemoryStore: Block broadcast_11_piece0 stored as bytes in memory (estimated size 8.8 KiB, free 434.1 MiB)
+24/11/09 11:20:25 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on 38e757416d68:34515 (size: 8.8 KiB, free: 434.3 MiB)
+24/11/09 11:20:25 INFO SparkContext: Created broadcast 11 from broadcast at DAGScheduler.scala:1585
+24/11/09 11:20:25 INFO BlockManagerInfo: Removed broadcast_10_piece0 on 38e757416d68:34515 in memory (size: 8.8 KiB, free: 434.4 MiB)
+24/11/09 11:20:25 INFO DAGScheduler: Submitting 3 missing tasks from ResultStage 6 (MapPartitionsRDD[19] at showString at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(1, 2, 3))
+24/11/09 11:20:25 INFO TaskSchedulerImpl: Adding task set 6.0 with 3 tasks resource profile 0
+24/11/09 11:20:25 INFO TaskSetManager: Starting task 0.0 in stage 6.0 (TID 8) (38e757416d68, executor driver, partition 1, PROCESS_LOCAL, 10123 bytes) 
+24/11/09 11:20:25 INFO TaskSetManager: Starting task 1.0 in stage 6.0 (TID 9) (38e757416d68, executor driver, partition 2, PROCESS_LOCAL, 10123 bytes) 
+24/11/09 11:20:25 INFO TaskSetManager: Starting task 2.0 in stage 6.0 (TID 10) (38e757416d68, executor driver, partition 3, PROCESS_LOCAL, 9814 bytes) 
+24/11/09 11:20:25 INFO Executor: Running task 0.0 in stage 6.0 (TID 8)
+24/11/09 11:20:25 INFO Executor: Running task 2.0 in stage 6.0 (TID 10)
+24/11/09 11:20:25 INFO Executor: Running task 1.0 in stage 6.0 (TID 9)
+24/11/09 11:20:25 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115430.txt, range: 0-74, partition values: [empty row]
+24/11/09 11:20:25 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115434.txt, range: 0-219, partition values: [empty row]
+24/11/09 11:20:25 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115425.txt, range: 0-575, partition values: [empty row]
+24/11/09 11:20:25 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115426.txt, range: 0-549, partition values: [empty row]
+24/11/09 11:20:25 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115429.txt, range: 0-74, partition values: [empty row]
+24/11/09 11:20:25 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115439.txt, range: 0-142, partition values: [empty row]
+24/11/09 11:20:25 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115440.txt, range: 0-444, partition values: [empty row]
+24/11/09 11:20:25 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115431.txt, range: 0-98, partition values: [empty row]
+24/11/09 11:20:25 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115428.txt, range: 0-68, partition values: [empty row]
+24/11/09 11:20:25 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115436.txt, range: 0-98, partition values: [empty row]
+24/11/09 11:20:25 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115427.txt, range: 0-338, partition values: [empty row]
+24/11/09 11:20:25 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115433.txt, range: 0-98, partition values: [empty row]
+24/11/09 11:20:25 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115441.txt, range: 0-281, partition values: [empty row]
+24/11/09 11:20:25 INFO Executor: Finished task 2.0 in stage 6.0 (TID 10). 1872 bytes result sent to driver
+24/11/09 11:20:25 INFO TaskSetManager: Finished task 2.0 in stage 6.0 (TID 10) in 69 ms on 38e757416d68 (executor driver) (1/3)
+24/11/09 11:20:25 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115432.txt, range: 0-96, partition values: [empty row]
+24/11/09 11:20:25 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115435.txt, range: 0-236, partition values: [empty row]
+24/11/09 11:20:25 INFO Executor: Finished task 0.0 in stage 6.0 (TID 8). 2089 bytes result sent to driver
+24/11/09 11:20:25 INFO Executor: Finished task 1.0 in stage 6.0 (TID 9). 1988 bytes result sent to driver
+24/11/09 11:20:25 INFO TaskSetManager: Finished task 1.0 in stage 6.0 (TID 9) in 89 ms on 38e757416d68 (executor driver) (2/3)
+24/11/09 11:20:25 INFO TaskSetManager: Finished task 0.0 in stage 6.0 (TID 8) in 93 ms on 38e757416d68 (executor driver) (3/3)
+24/11/09 11:20:25 INFO TaskSchedulerImpl: Removed TaskSet 6.0, whose tasks have all completed, from pool 
+24/11/09 11:20:25 INFO DAGScheduler: ResultStage 6 (showString at NativeMethodAccessorImpl.java:0) finished in 0.126 s
+24/11/09 11:20:25 INFO DAGScheduler: Job 6 is finished. Cancelling potential speculative or zombie tasks for this job
+24/11/09 11:20:25 INFO TaskSchedulerImpl: Killing all running tasks in stage 6: Stage finished
+24/11/09 11:20:25 INFO DAGScheduler: Job 6 finished: showString at NativeMethodAccessorImpl.java:0, took 0.134588 s
+24/11/09 11:20:25 INFO CodeGenerator: Code generated in 18.660396 ms
++-------------------+----------------------------------------------------------------------------------------------------+------+------------------------------------------------------------------------------------------------+--------+-----+--------------+-------------+
+|timestamp          |log_data                                                                                            |action|product                                                                                         |quantity|price|route         |hour         |
++-------------------+----------------------------------------------------------------------------------------------------+------+------------------------------------------------------------------------------------------------+--------+-----+--------------+-------------+
+|2024-11-09 11:54:40|buy|Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED|buy   |Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED|NULL    |NULL |NULL          |2024/11/09 11|
+|2024-11-09 11:54:40|buy|Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED|buy   |Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED|NULL    |NULL |NULL          |2024/11/09 11|
+|2024-11-09 11:54:40|buy|Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED|buy   |Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED|NULL    |NULL |NULL          |2024/11/09 11|
+|2024-11-09 11:54:35|buy|John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet|1|695|products      |buy   |John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet                     |1       |695.0|products      |2024/11/09 11|
+|2024-11-09 11:54:35|buy|John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet|1|695|product-detail|buy   |John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet                     |1       |695.0|product-detail|2024/11/09 11|
++-------------------+----------------------------------------------------------------------------------------------------+------+------------------------------------------------------------------------------------------------+--------+-----+--------------+-------------+
+only showing top 5 rows
+
+Showing a few rows of the aggregated data:
+24/11/09 11:20:26 INFO FileSourceStrategy: Pushed Filters: IsNotNull(value)
+24/11/09 11:20:26 INFO FileSourceStrategy: Post-Scan Filters: isnotnull(value#0),(split(substring(value#0, 21, 100), \|, -1)[0] = buy)
+24/11/09 11:20:26 INFO CodeGenerator: Code generated in 108.793862 ms
+24/11/09 11:20:26 INFO MemoryStore: Block broadcast_12 stored as values in memory (estimated size 199.4 KiB, free 433.9 MiB)
+24/11/09 11:20:26 INFO MemoryStore: Block broadcast_12_piece0 stored as bytes in memory (estimated size 34.2 KiB, free 433.9 MiB)
+24/11/09 11:20:26 INFO BlockManagerInfo: Added broadcast_12_piece0 in memory on 38e757416d68:34515 (size: 34.2 KiB, free: 434.3 MiB)
+24/11/09 11:20:26 INFO SparkContext: Created broadcast 12 from showString at NativeMethodAccessorImpl.java:0
+24/11/09 11:20:26 INFO FileSourceScanExec: Planning scan with bin packing, max size: 20974749 bytes, open cost is considered as scanning 4194304 bytes.
+24/11/09 11:20:26 INFO DAGScheduler: Registering RDD 23 (showString at NativeMethodAccessorImpl.java:0) as input to shuffle 0
+24/11/09 11:20:26 INFO DAGScheduler: Got map stage job 7 (showString at NativeMethodAccessorImpl.java:0) with 4 output partitions
+24/11/09 11:20:26 INFO DAGScheduler: Final stage: ShuffleMapStage 7 (showString at NativeMethodAccessorImpl.java:0)
+24/11/09 11:20:26 INFO DAGScheduler: Parents of final stage: List()
+24/11/09 11:20:26 INFO DAGScheduler: Missing parents: List()
+24/11/09 11:20:26 INFO DAGScheduler: Submitting ShuffleMapStage 7 (MapPartitionsRDD[23] at showString at NativeMethodAccessorImpl.java:0), which has no missing parents
+24/11/09 11:20:26 INFO MemoryStore: Block broadcast_13 stored as values in memory (estimated size 49.8 KiB, free 433.9 MiB)
+24/11/09 11:20:26 INFO MemoryStore: Block broadcast_13_piece0 stored as bytes in memory (estimated size 22.1 KiB, free 433.8 MiB)
+24/11/09 11:20:26 INFO BlockManagerInfo: Added broadcast_13_piece0 in memory on 38e757416d68:34515 (size: 22.1 KiB, free: 434.3 MiB)
+24/11/09 11:20:26 INFO SparkContext: Created broadcast 13 from broadcast at DAGScheduler.scala:1585
+24/11/09 11:20:26 INFO DAGScheduler: Submitting 4 missing tasks from ShuffleMapStage 7 (MapPartitionsRDD[23] at showString at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1, 2, 3))
+24/11/09 11:20:26 INFO TaskSchedulerImpl: Adding task set 7.0 with 4 tasks resource profile 0
+24/11/09 11:20:26 INFO TaskSetManager: Starting task 0.0 in stage 7.0 (TID 11) (38e757416d68, executor driver, partition 0, PROCESS_LOCAL, 10009 bytes) 
+24/11/09 11:20:26 INFO TaskSetManager: Starting task 1.0 in stage 7.0 (TID 12) (38e757416d68, executor driver, partition 1, PROCESS_LOCAL, 10112 bytes) 
+24/11/09 11:20:26 INFO TaskSetManager: Starting task 2.0 in stage 7.0 (TID 13) (38e757416d68, executor driver, partition 2, PROCESS_LOCAL, 10112 bytes) 
+24/11/09 11:20:26 INFO TaskSetManager: Starting task 3.0 in stage 7.0 (TID 14) (38e757416d68, executor driver, partition 3, PROCESS_LOCAL, 9803 bytes) 
+24/11/09 11:20:26 INFO Executor: Running task 0.0 in stage 7.0 (TID 11)
+24/11/09 11:20:26 INFO Executor: Running task 2.0 in stage 7.0 (TID 13)
+24/11/09 11:20:26 INFO Executor: Running task 1.0 in stage 7.0 (TID 12)
+24/11/09 11:20:26 INFO Executor: Running task 3.0 in stage 7.0 (TID 14)
+24/11/09 11:20:26 INFO CodeGenerator: Code generated in 106.392704 ms
+24/11/09 11:20:26 INFO CodeGenerator: Code generated in 29.297744 ms
+24/11/09 11:20:26 INFO CodeGenerator: Code generated in 19.236343 ms
+24/11/09 11:20:26 INFO CodeGenerator: Code generated in 19.847285 ms
+24/11/09 11:20:26 INFO CodeGenerator: Code generated in 17.159192 ms
+24/11/09 11:20:26 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115434.txt, range: 0-219, partition values: [empty row]
+24/11/09 11:20:26 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115442.txt, range: 0-2441, partition values: [empty row]
+24/11/09 11:20:26 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115430.txt, range: 0-74, partition values: [empty row]
+24/11/09 11:20:26 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115425.txt, range: 0-575, partition values: [empty row]
+24/11/09 11:20:26 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115439.txt, range: 0-142, partition values: [empty row]
+24/11/09 11:20:26 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115443.txt, range: 0-2293, partition values: [empty row]
+24/11/09 11:20:26 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115429.txt, range: 0-74, partition values: [empty row]
+24/11/09 11:20:26 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115428.txt, range: 0-68, partition values: [empty row]
+24/11/09 11:20:26 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115438.txt, range: 0-1761, partition values: [empty row]
+24/11/09 11:20:26 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115431.txt, range: 0-98, partition values: [empty row]
+24/11/09 11:20:26 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115426.txt, range: 0-549, partition values: [empty row]
+24/11/09 11:20:26 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115436.txt, range: 0-98, partition values: [empty row]
+24/11/09 11:20:27 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115444.txt, range: 0-1533, partition values: [empty row]
+24/11/09 11:20:27 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115440.txt, range: 0-444, partition values: [empty row]
+24/11/09 11:20:27 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115433.txt, range: 0-98, partition values: [empty row]
+24/11/09 11:20:27 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115437.txt, range: 0-1501, partition values: [empty row]
+24/11/09 11:20:27 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115427.txt, range: 0-338, partition values: [empty row]
+24/11/09 11:20:27 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115432.txt, range: 0-96, partition values: [empty row]
+24/11/09 11:20:27 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115441.txt, range: 0-281, partition values: [empty row]
+24/11/09 11:20:27 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115435.txt, range: 0-236, partition values: [empty row]
+24/11/09 11:20:27 INFO Executor: Finished task 0.0 in stage 7.0 (TID 11). 2692 bytes result sent to driver
+24/11/09 11:20:27 INFO TaskSetManager: Finished task 0.0 in stage 7.0 (TID 11) in 469 ms on 38e757416d68 (executor driver) (1/4)
+24/11/09 11:20:27 INFO Executor: Finished task 3.0 in stage 7.0 (TID 14). 2778 bytes result sent to driver
+24/11/09 11:20:27 INFO TaskSetManager: Finished task 3.0 in stage 7.0 (TID 14) in 471 ms on 38e757416d68 (executor driver) (2/4)
+24/11/09 11:20:27 INFO Executor: Finished task 1.0 in stage 7.0 (TID 12). 2778 bytes result sent to driver
+24/11/09 11:20:27 INFO TaskSetManager: Finished task 1.0 in stage 7.0 (TID 12) in 479 ms on 38e757416d68 (executor driver) (3/4)
+24/11/09 11:20:27 INFO Executor: Finished task 2.0 in stage 7.0 (TID 13). 2778 bytes result sent to driver
+24/11/09 11:20:27 INFO TaskSetManager: Finished task 2.0 in stage 7.0 (TID 13) in 488 ms on 38e757416d68 (executor driver) (4/4)
+24/11/09 11:20:27 INFO TaskSchedulerImpl: Removed TaskSet 7.0, whose tasks have all completed, from pool 
+24/11/09 11:20:27 INFO DAGScheduler: ShuffleMapStage 7 (showString at NativeMethodAccessorImpl.java:0) finished in 0.532 s
+24/11/09 11:20:27 INFO DAGScheduler: looking for newly runnable stages
+24/11/09 11:20:27 INFO DAGScheduler: running: Set()
+24/11/09 11:20:27 INFO DAGScheduler: waiting: Set()
+24/11/09 11:20:27 INFO DAGScheduler: failed: Set()
+24/11/09 11:20:27 INFO ShufflePartitionsUtil: For shuffle(0), advisory target size: 67108864, actual target size 1048576, minimum partition size: 1048576
+24/11/09 11:20:27 INFO HashAggregateExec: spark.sql.codegen.aggregate.map.twolevel.enabled is set to true, but current version of codegened fast hashmap does not support this aggregate.
+24/11/09 11:20:27 INFO CodeGenerator: Code generated in 33.34601 ms
+24/11/09 11:20:27 INFO SparkContext: Starting job: showString at NativeMethodAccessorImpl.java:0
+24/11/09 11:20:27 INFO DAGScheduler: Got job 8 (showString at NativeMethodAccessorImpl.java:0) with 1 output partitions
+24/11/09 11:20:27 INFO DAGScheduler: Final stage: ResultStage 9 (showString at NativeMethodAccessorImpl.java:0)
+24/11/09 11:20:27 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 8)
+24/11/09 11:20:27 INFO DAGScheduler: Missing parents: List()
+24/11/09 11:20:27 INFO DAGScheduler: Submitting ResultStage 9 (MapPartitionsRDD[26] at showString at NativeMethodAccessorImpl.java:0), which has no missing parents
+24/11/09 11:20:27 INFO MemoryStore: Block broadcast_14 stored as values in memory (estimated size 48.1 KiB, free 433.8 MiB)
+24/11/09 11:20:27 INFO MemoryStore: Block broadcast_14_piece0 stored as bytes in memory (estimated size 21.7 KiB, free 433.8 MiB)
+24/11/09 11:20:27 INFO BlockManagerInfo: Added broadcast_14_piece0 in memory on 38e757416d68:34515 (size: 21.7 KiB, free: 434.3 MiB)
+24/11/09 11:20:27 INFO SparkContext: Created broadcast 14 from broadcast at DAGScheduler.scala:1585
+24/11/09 11:20:27 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 9 (MapPartitionsRDD[26] at showString at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+24/11/09 11:20:27 INFO TaskSchedulerImpl: Adding task set 9.0 with 1 tasks resource profile 0
+24/11/09 11:20:27 INFO TaskSetManager: Starting task 0.0 in stage 9.0 (TID 15) (38e757416d68, executor driver, partition 0, NODE_LOCAL, 8999 bytes) 
+24/11/09 11:20:27 INFO Executor: Running task 0.0 in stage 9.0 (TID 15)
+24/11/09 11:20:27 INFO ShuffleBlockFetcherIterator: Getting 3 (870.0 B) non-empty blocks including 3 (870.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+24/11/09 11:20:27 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 42 ms
+24/11/09 11:20:27 INFO CodeGenerator: Code generated in 80.234791 ms
+24/11/09 11:20:27 INFO Executor: Finished task 0.0 in stage 9.0 (TID 15). 5578 bytes result sent to driver
+24/11/09 11:20:27 INFO TaskSetManager: Finished task 0.0 in stage 9.0 (TID 15) in 334 ms on 38e757416d68 (executor driver) (1/1)
+24/11/09 11:20:27 INFO TaskSchedulerImpl: Removed TaskSet 9.0, whose tasks have all completed, from pool 
+24/11/09 11:20:27 INFO DAGScheduler: ResultStage 9 (showString at NativeMethodAccessorImpl.java:0) finished in 0.364 s
+24/11/09 11:20:27 INFO DAGScheduler: Job 8 is finished. Cancelling potential speculative or zombie tasks for this job
+24/11/09 11:20:27 INFO TaskSchedulerImpl: Killing all running tasks in stage 9: Stage finished
+24/11/09 11:20:27 INFO DAGScheduler: Job 8 finished: showString at NativeMethodAccessorImpl.java:0, took 0.397667 s
+24/11/09 11:20:27 INFO CodeGenerator: Code generated in 38.820447 ms
++-------------+------------------------------------------------------------------------------------------------+-----------+
+|hour         |product                                                                                         |total_price|
++-------------+------------------------------------------------------------------------------------------------+-----------+
+|2024/11/09 11|John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet                     |1390.0     |
+|2024/11/09 11|Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED|NULL       |
+|2024/11/09 11|Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops                                           |109.95     |
+|2024/11/09 11|Solid Gold Petite Micropave                                                                     |504.0      |
++-------------+------------------------------------------------------------------------------------------------+-----------+
+
+Showing the final output before writing to disk:
+24/11/09 11:20:28 INFO FileSourceStrategy: Pushed Filters: IsNotNull(value)
+24/11/09 11:20:28 INFO FileSourceStrategy: Post-Scan Filters: isnotnull(value#0),(split(substring(value#0, 21, 100), \|, -1)[0] = buy)
+24/11/09 11:20:28 INFO MemoryStore: Block broadcast_15 stored as values in memory (estimated size 199.4 KiB, free 433.6 MiB)
+24/11/09 11:20:28 INFO MemoryStore: Block broadcast_15_piece0 stored as bytes in memory (estimated size 34.2 KiB, free 433.5 MiB)
+24/11/09 11:20:28 INFO BlockManagerInfo: Added broadcast_15_piece0 in memory on 38e757416d68:34515 (size: 34.2 KiB, free: 434.2 MiB)
+24/11/09 11:20:28 INFO SparkContext: Created broadcast 15 from showString at NativeMethodAccessorImpl.java:0
+24/11/09 11:20:28 INFO FileSourceScanExec: Planning scan with bin packing, max size: 20974749 bytes, open cost is considered as scanning 4194304 bytes.
+24/11/09 11:20:28 INFO DAGScheduler: Registering RDD 30 (showString at NativeMethodAccessorImpl.java:0) as input to shuffle 1
+24/11/09 11:20:28 INFO DAGScheduler: Got map stage job 9 (showString at NativeMethodAccessorImpl.java:0) with 4 output partitions
+24/11/09 11:20:28 INFO DAGScheduler: Final stage: ShuffleMapStage 10 (showString at NativeMethodAccessorImpl.java:0)
+24/11/09 11:20:28 INFO DAGScheduler: Parents of final stage: List()
+24/11/09 11:20:28 INFO DAGScheduler: Missing parents: List()
+24/11/09 11:20:28 INFO DAGScheduler: Submitting ShuffleMapStage 10 (MapPartitionsRDD[30] at showString at NativeMethodAccessorImpl.java:0), which has no missing parents
+24/11/09 11:20:28 INFO MemoryStore: Block broadcast_16 stored as values in memory (estimated size 50.0 KiB, free 433.5 MiB)
+24/11/09 11:20:28 INFO MemoryStore: Block broadcast_16_piece0 stored as bytes in memory (estimated size 22.1 KiB, free 433.5 MiB)
+24/11/09 11:20:28 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on 38e757416d68:34515 (size: 22.1 KiB, free: 434.2 MiB)
+24/11/09 11:20:28 INFO SparkContext: Created broadcast 16 from broadcast at DAGScheduler.scala:1585
+24/11/09 11:20:28 INFO DAGScheduler: Submitting 4 missing tasks from ShuffleMapStage 10 (MapPartitionsRDD[30] at showString at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1, 2, 3))
+24/11/09 11:20:28 INFO TaskSchedulerImpl: Adding task set 10.0 with 4 tasks resource profile 0
+24/11/09 11:20:28 INFO TaskSetManager: Starting task 0.0 in stage 10.0 (TID 16) (38e757416d68, executor driver, partition 0, PROCESS_LOCAL, 10009 bytes) 
+24/11/09 11:20:28 INFO TaskSetManager: Starting task 1.0 in stage 10.0 (TID 17) (38e757416d68, executor driver, partition 1, PROCESS_LOCAL, 10112 bytes) 
+24/11/09 11:20:28 INFO TaskSetManager: Starting task 2.0 in stage 10.0 (TID 18) (38e757416d68, executor driver, partition 2, PROCESS_LOCAL, 10112 bytes) 
+24/11/09 11:20:28 INFO TaskSetManager: Starting task 3.0 in stage 10.0 (TID 19) (38e757416d68, executor driver, partition 3, PROCESS_LOCAL, 9803 bytes) 
+24/11/09 11:20:28 INFO Executor: Running task 3.0 in stage 10.0 (TID 19)
+24/11/09 11:20:28 INFO Executor: Running task 2.0 in stage 10.0 (TID 18)
+24/11/09 11:20:28 INFO Executor: Running task 0.0 in stage 10.0 (TID 16)
+24/11/09 11:20:28 INFO Executor: Running task 1.0 in stage 10.0 (TID 17)
+24/11/09 11:20:28 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115442.txt, range: 0-2441, partition values: [empty row]
+24/11/09 11:20:28 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115443.txt, range: 0-2293, partition values: [empty row]
+24/11/09 11:20:28 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115438.txt, range: 0-1761, partition values: [empty row]
+24/11/09 11:20:28 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115430.txt, range: 0-74, partition values: [empty row]
+24/11/09 11:20:28 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115444.txt, range: 0-1533, partition values: [empty row]
+24/11/09 11:20:28 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115437.txt, range: 0-1501, partition values: [empty row]
+24/11/09 11:20:28 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115429.txt, range: 0-74, partition values: [empty row]
+24/11/09 11:20:28 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115428.txt, range: 0-68, partition values: [empty row]
+24/11/09 11:20:28 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115434.txt, range: 0-219, partition values: [empty row]
+24/11/09 11:20:28 INFO Executor: Finished task 0.0 in stage 10.0 (TID 16). 2692 bytes result sent to driver
+24/11/09 11:20:28 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115425.txt, range: 0-575, partition values: [empty row]
+24/11/09 11:20:28 INFO BlockManagerInfo: Removed broadcast_11_piece0 on 38e757416d68:34515 in memory (size: 8.8 KiB, free: 434.2 MiB)
+24/11/09 11:20:28 INFO TaskSetManager: Finished task 0.0 in stage 10.0 (TID 16) in 93 ms on 38e757416d68 (executor driver) (1/4)
+24/11/09 11:20:28 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115439.txt, range: 0-142, partition values: [empty row]
+24/11/09 11:20:28 INFO BlockManagerInfo: Removed broadcast_13_piece0 on 38e757416d68:34515 in memory (size: 22.1 KiB, free: 434.3 MiB)
+24/11/09 11:20:28 INFO BlockManagerInfo: Removed broadcast_9_piece0 on 38e757416d68:34515 in memory (size: 34.2 KiB, free: 434.3 MiB)
+24/11/09 11:20:28 INFO BlockManagerInfo: Removed broadcast_14_piece0 on 38e757416d68:34515 in memory (size: 21.7 KiB, free: 434.3 MiB)
+24/11/09 11:20:28 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115431.txt, range: 0-98, partition values: [empty row]
+24/11/09 11:20:28 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115426.txt, range: 0-549, partition values: [empty row]
+24/11/09 11:20:28 INFO BlockManagerInfo: Removed broadcast_12_piece0 on 38e757416d68:34515 in memory (size: 34.2 KiB, free: 434.3 MiB)
+24/11/09 11:20:28 INFO Executor: Finished task 3.0 in stage 10.0 (TID 19). 2821 bytes result sent to driver
+24/11/09 11:20:28 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115436.txt, range: 0-98, partition values: [empty row]
+24/11/09 11:20:28 INFO TaskSetManager: Finished task 3.0 in stage 10.0 (TID 19) in 128 ms on 38e757416d68 (executor driver) (2/4)
+24/11/09 11:20:28 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115433.txt, range: 0-98, partition values: [empty row]
+24/11/09 11:20:28 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115440.txt, range: 0-444, partition values: [empty row]
+24/11/09 11:20:28 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115432.txt, range: 0-96, partition values: [empty row]
+24/11/09 11:20:28 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115427.txt, range: 0-338, partition values: [empty row]
+24/11/09 11:20:28 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115441.txt, range: 0-281, partition values: [empty row]
+24/11/09 11:20:28 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115435.txt, range: 0-236, partition values: [empty row]
+24/11/09 11:20:28 INFO Executor: Finished task 2.0 in stage 10.0 (TID 18). 2821 bytes result sent to driver
+24/11/09 11:20:28 INFO TaskSetManager: Finished task 2.0 in stage 10.0 (TID 18) in 166 ms on 38e757416d68 (executor driver) (3/4)
+24/11/09 11:20:28 INFO Executor: Finished task 1.0 in stage 10.0 (TID 17). 2821 bytes result sent to driver
+24/11/09 11:20:28 INFO TaskSetManager: Finished task 1.0 in stage 10.0 (TID 17) in 173 ms on 38e757416d68 (executor driver) (4/4)
+24/11/09 11:20:28 INFO TaskSchedulerImpl: Removed TaskSet 10.0, whose tasks have all completed, from pool 
+24/11/09 11:20:28 INFO DAGScheduler: ShuffleMapStage 10 (showString at NativeMethodAccessorImpl.java:0) finished in 0.191 s
+24/11/09 11:20:28 INFO DAGScheduler: looking for newly runnable stages
+24/11/09 11:20:28 INFO DAGScheduler: running: Set()
+24/11/09 11:20:28 INFO DAGScheduler: waiting: Set()
+24/11/09 11:20:28 INFO DAGScheduler: failed: Set()
+24/11/09 11:20:28 INFO ShufflePartitionsUtil: For shuffle(1), advisory target size: 67108864, actual target size 1048576, minimum partition size: 1048576
+24/11/09 11:20:28 INFO CodeGenerator: Code generated in 19.606816 ms
+24/11/09 11:20:28 INFO HashAggregateExec: spark.sql.codegen.aggregate.map.twolevel.enabled is set to true, but current version of codegened fast hashmap does not support this aggregate.
+24/11/09 11:20:28 INFO CodeGenerator: Code generated in 29.221141 ms
+24/11/09 11:20:28 INFO SparkContext: Starting job: showString at NativeMethodAccessorImpl.java:0
+24/11/09 11:20:28 INFO DAGScheduler: Got job 10 (showString at NativeMethodAccessorImpl.java:0) with 1 output partitions
+24/11/09 11:20:28 INFO DAGScheduler: Final stage: ResultStage 12 (showString at NativeMethodAccessorImpl.java:0)
+24/11/09 11:20:28 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 11)
+24/11/09 11:20:28 INFO DAGScheduler: Missing parents: List()
+24/11/09 11:20:28 INFO DAGScheduler: Submitting ResultStage 12 (MapPartitionsRDD[34] at showString at NativeMethodAccessorImpl.java:0), which has no missing parents
+24/11/09 11:20:28 INFO MemoryStore: Block broadcast_17 stored as values in memory (estimated size 49.2 KiB, free 434.1 MiB)
+24/11/09 11:20:28 INFO MemoryStore: Block broadcast_17_piece0 stored as bytes in memory (estimated size 22.2 KiB, free 434.0 MiB)
+24/11/09 11:20:28 INFO BlockManagerInfo: Added broadcast_17_piece0 in memory on 38e757416d68:34515 (size: 22.2 KiB, free: 434.3 MiB)
+24/11/09 11:20:28 INFO SparkContext: Created broadcast 17 from broadcast at DAGScheduler.scala:1585
+24/11/09 11:20:28 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 12 (MapPartitionsRDD[34] at showString at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+24/11/09 11:20:28 INFO TaskSchedulerImpl: Adding task set 12.0 with 1 tasks resource profile 0
+24/11/09 11:20:28 INFO TaskSetManager: Starting task 0.0 in stage 12.0 (TID 20) (38e757416d68, executor driver, partition 0, NODE_LOCAL, 8999 bytes) 
+24/11/09 11:20:28 INFO Executor: Running task 0.0 in stage 12.0 (TID 20)
+24/11/09 11:20:28 INFO CodeGenerator: Code generated in 9.374396 ms
+24/11/09 11:20:28 INFO ShuffleBlockFetcherIterator: Getting 3 (870.0 B) non-empty blocks including 3 (870.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+24/11/09 11:20:28 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+24/11/09 11:20:28 INFO CodeGenerator: Code generated in 66.155944 ms
+24/11/09 11:20:28 INFO Executor: Finished task 0.0 in stage 12.0 (TID 20). 5700 bytes result sent to driver
+24/11/09 11:20:28 INFO TaskSetManager: Finished task 0.0 in stage 12.0 (TID 20) in 196 ms on 38e757416d68 (executor driver) (1/1)
+24/11/09 11:20:28 INFO TaskSchedulerImpl: Removed TaskSet 12.0, whose tasks have all completed, from pool 
+24/11/09 11:20:28 INFO DAGScheduler: ResultStage 12 (showString at NativeMethodAccessorImpl.java:0) finished in 0.219 s
+24/11/09 11:20:28 INFO DAGScheduler: Job 10 is finished. Cancelling potential speculative or zombie tasks for this job
+24/11/09 11:20:28 INFO TaskSchedulerImpl: Killing all running tasks in stage 12: Stage finished
+24/11/09 11:20:29 INFO DAGScheduler: Job 10 finished: showString at NativeMethodAccessorImpl.java:0, took 0.236650 s
+24/11/09 11:20:29 INFO CodeGenerator: Code generated in 13.972662 ms
++-------------+------------------------------------------------------------------------------------------------+-----------+
+|hour         |product                                                                                         |total_price|
++-------------+------------------------------------------------------------------------------------------------+-----------+
+|2024/11/09 11|John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet                     |1390.0     |
+|2024/11/09 11|Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED|NULL       |
+|2024/11/09 11|Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops                                           |109.95     |
+|2024/11/09 11|Solid Gold Petite Micropave                                                                     |504.0      |
++-------------+------------------------------------------------------------------------------------------------+-----------+
+
+Writing output to /app/output/output.txt
+24/11/09 11:20:29 INFO FileSourceStrategy: Pushed Filters: IsNotNull(value)
+24/11/09 11:20:29 INFO FileSourceStrategy: Post-Scan Filters: isnotnull(value#0),(split(substring(value#0, 21, 100), \|, -1)[0] = buy)
+24/11/09 11:20:29 INFO MemoryStore: Block broadcast_18 stored as values in memory (estimated size 199.4 KiB, free 433.8 MiB)
+24/11/09 11:20:29 INFO MemoryStore: Block broadcast_18_piece0 stored as bytes in memory (estimated size 34.2 KiB, free 433.8 MiB)
+24/11/09 11:20:29 INFO BlockManagerInfo: Added broadcast_18_piece0 in memory on 38e757416d68:34515 (size: 34.2 KiB, free: 434.3 MiB)
+24/11/09 11:20:29 INFO SparkContext: Created broadcast 18 from csv at NativeMethodAccessorImpl.java:0
+24/11/09 11:20:29 INFO FileSourceScanExec: Planning scan with bin packing, max size: 20974749 bytes, open cost is considered as scanning 4194304 bytes.
+24/11/09 11:20:29 INFO DAGScheduler: Registering RDD 38 (csv at NativeMethodAccessorImpl.java:0) as input to shuffle 2
+24/11/09 11:20:29 INFO DAGScheduler: Got map stage job 11 (csv at NativeMethodAccessorImpl.java:0) with 4 output partitions
+24/11/09 11:20:29 INFO DAGScheduler: Final stage: ShuffleMapStage 13 (csv at NativeMethodAccessorImpl.java:0)
+24/11/09 11:20:29 INFO DAGScheduler: Parents of final stage: List()
+24/11/09 11:20:29 INFO DAGScheduler: Missing parents: List()
+24/11/09 11:20:29 INFO DAGScheduler: Submitting ShuffleMapStage 13 (MapPartitionsRDD[38] at csv at NativeMethodAccessorImpl.java:0), which has no missing parents
+24/11/09 11:20:29 INFO MemoryStore: Block broadcast_19 stored as values in memory (estimated size 50.0 KiB, free 433.8 MiB)
+24/11/09 11:20:29 INFO MemoryStore: Block broadcast_19_piece0 stored as bytes in memory (estimated size 22.1 KiB, free 433.7 MiB)
+24/11/09 11:20:29 INFO BlockManagerInfo: Added broadcast_19_piece0 in memory on 38e757416d68:34515 (size: 22.1 KiB, free: 434.3 MiB)
+24/11/09 11:20:29 INFO SparkContext: Created broadcast 19 from broadcast at DAGScheduler.scala:1585
+24/11/09 11:20:29 INFO DAGScheduler: Submitting 4 missing tasks from ShuffleMapStage 13 (MapPartitionsRDD[38] at csv at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1, 2, 3))
+24/11/09 11:20:29 INFO TaskSchedulerImpl: Adding task set 13.0 with 4 tasks resource profile 0
+24/11/09 11:20:29 INFO TaskSetManager: Starting task 0.0 in stage 13.0 (TID 21) (38e757416d68, executor driver, partition 0, PROCESS_LOCAL, 10009 bytes) 
+24/11/09 11:20:29 INFO TaskSetManager: Starting task 1.0 in stage 13.0 (TID 22) (38e757416d68, executor driver, partition 1, PROCESS_LOCAL, 10112 bytes) 
+24/11/09 11:20:29 INFO TaskSetManager: Starting task 2.0 in stage 13.0 (TID 23) (38e757416d68, executor driver, partition 2, PROCESS_LOCAL, 10112 bytes) 
+24/11/09 11:20:29 INFO TaskSetManager: Starting task 3.0 in stage 13.0 (TID 24) (38e757416d68, executor driver, partition 3, PROCESS_LOCAL, 9803 bytes) 
+24/11/09 11:20:29 INFO Executor: Running task 2.0 in stage 13.0 (TID 23)
+24/11/09 11:20:29 INFO Executor: Running task 0.0 in stage 13.0 (TID 21)
+24/11/09 11:20:29 INFO Executor: Running task 1.0 in stage 13.0 (TID 22)
+24/11/09 11:20:29 INFO Executor: Running task 3.0 in stage 13.0 (TID 24)
+24/11/09 11:20:29 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115425.txt, range: 0-575, partition values: [empty row]
+24/11/09 11:20:29 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115426.txt, range: 0-549, partition values: [empty row]
+24/11/09 11:20:29 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115440.txt, range: 0-444, partition values: [empty row]
+24/11/09 11:20:29 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115427.txt, range: 0-338, partition values: [empty row]
+24/11/09 11:20:29 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115441.txt, range: 0-281, partition values: [empty row]
+24/11/09 11:20:29 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115435.txt, range: 0-236, partition values: [empty row]
+24/11/09 11:20:29 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115430.txt, range: 0-74, partition values: [empty row]
+24/11/09 11:20:29 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115429.txt, range: 0-74, partition values: [empty row]
+24/11/09 11:20:29 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115442.txt, range: 0-2441, partition values: [empty row]
+24/11/09 11:20:29 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115428.txt, range: 0-68, partition values: [empty row]
+24/11/09 11:20:29 INFO Executor: Finished task 1.0 in stage 13.0 (TID 22). 2778 bytes result sent to driver
+24/11/09 11:20:29 INFO TaskSetManager: Finished task 1.0 in stage 13.0 (TID 22) in 95 ms on 38e757416d68 (executor driver) (1/4)
+24/11/09 11:20:29 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115443.txt, range: 0-2293, partition values: [empty row]
+24/11/09 11:20:29 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115438.txt, range: 0-1761, partition values: [empty row]
+24/11/09 11:20:29 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115434.txt, range: 0-219, partition values: [empty row]
+24/11/09 11:20:29 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115444.txt, range: 0-1533, partition values: [empty row]
+24/11/09 11:20:29 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115437.txt, range: 0-1501, partition values: [empty row]
+24/11/09 11:20:29 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115439.txt, range: 0-142, partition values: [empty row]
+24/11/09 11:20:29 INFO Executor: Finished task 3.0 in stage 13.0 (TID 24). 2778 bytes result sent to driver
+24/11/09 11:20:29 INFO TaskSetManager: Finished task 3.0 in stage 13.0 (TID 24) in 126 ms on 38e757416d68 (executor driver) (2/4)
+24/11/09 11:20:29 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115431.txt, range: 0-98, partition values: [empty row]
+24/11/09 11:20:29 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115436.txt, range: 0-98, partition values: [empty row]
+24/11/09 11:20:29 INFO Executor: Finished task 0.0 in stage 13.0 (TID 21). 2649 bytes result sent to driver
+24/11/09 11:20:29 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115433.txt, range: 0-98, partition values: [empty row]
+24/11/09 11:20:29 INFO TaskSetManager: Finished task 0.0 in stage 13.0 (TID 21) in 140 ms on 38e757416d68 (executor driver) (3/4)
+24/11/09 11:20:29 INFO FileScanRDD: Reading File path: file:///app/logs/2024110911/20241109115432.txt, range: 0-96, partition values: [empty row]
+24/11/09 11:20:29 INFO Executor: Finished task 2.0 in stage 13.0 (TID 23). 2778 bytes result sent to driver
+24/11/09 11:20:29 INFO TaskSetManager: Finished task 2.0 in stage 13.0 (TID 23) in 157 ms on 38e757416d68 (executor driver) (4/4)
+24/11/09 11:20:29 INFO TaskSchedulerImpl: Removed TaskSet 13.0, whose tasks have all completed, from pool 
+24/11/09 11:20:29 INFO DAGScheduler: ShuffleMapStage 13 (csv at NativeMethodAccessorImpl.java:0) finished in 0.174 s
+24/11/09 11:20:29 INFO DAGScheduler: looking for newly runnable stages
+24/11/09 11:20:29 INFO DAGScheduler: running: Set()
+24/11/09 11:20:29 INFO DAGScheduler: waiting: Set()
+24/11/09 11:20:29 INFO DAGScheduler: failed: Set()
+24/11/09 11:20:29 INFO ShufflePartitionsUtil: For shuffle(2), advisory target size: 67108864, actual target size 1048576, minimum partition size: 1048576
+24/11/09 11:20:29 INFO HashAggregateExec: spark.sql.codegen.aggregate.map.twolevel.enabled is set to true, but current version of codegened fast hashmap does not support this aggregate.
+24/11/09 11:20:29 INFO SparkContext: Starting job: csv at NativeMethodAccessorImpl.java:0
+24/11/09 11:20:29 INFO DAGScheduler: Got job 12 (csv at NativeMethodAccessorImpl.java:0) with 1 output partitions
+24/11/09 11:20:29 INFO DAGScheduler: Final stage: ResultStage 15 (csv at NativeMethodAccessorImpl.java:0)
+24/11/09 11:20:29 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 14)
+24/11/09 11:20:29 INFO DAGScheduler: Missing parents: List()
+24/11/09 11:20:29 INFO DAGScheduler: Submitting ResultStage 15 (MapPartitionsRDD[43] at csv at NativeMethodAccessorImpl.java:0), which has no missing parents
+24/11/09 11:20:29 INFO MemoryStore: Block broadcast_20 stored as values in memory (estimated size 49.1 KiB, free 433.7 MiB)
+24/11/09 11:20:29 INFO MemoryStore: Block broadcast_20_piece0 stored as bytes in memory (estimated size 22.1 KiB, free 433.7 MiB)
+24/11/09 11:20:29 INFO BlockManagerInfo: Added broadcast_20_piece0 in memory on 38e757416d68:34515 (size: 22.1 KiB, free: 434.2 MiB)
+24/11/09 11:20:29 INFO SparkContext: Created broadcast 20 from broadcast at DAGScheduler.scala:1585
+24/11/09 11:20:29 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 15 (MapPartitionsRDD[43] at csv at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+24/11/09 11:20:29 INFO TaskSchedulerImpl: Adding task set 15.0 with 1 tasks resource profile 0
+24/11/09 11:20:29 INFO TaskSetManager: Starting task 0.0 in stage 15.0 (TID 25) (38e757416d68, executor driver, partition 0, NODE_LOCAL, 8999 bytes) 
+24/11/09 11:20:29 INFO Executor: Running task 0.0 in stage 15.0 (TID 25)
+24/11/09 11:20:29 INFO ShuffleBlockFetcherIterator: Getting 3 (870.0 B) non-empty blocks including 3 (870.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+24/11/09 11:20:29 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+24/11/09 11:20:29 INFO Executor: Finished task 0.0 in stage 15.0 (TID 25). 5477 bytes result sent to driver
+24/11/09 11:20:29 INFO TaskSetManager: Finished task 0.0 in stage 15.0 (TID 25) in 47 ms on 38e757416d68 (executor driver) (1/1)
+24/11/09 11:20:29 INFO DAGScheduler: ResultStage 15 (csv at NativeMethodAccessorImpl.java:0) finished in 0.057 s
+24/11/09 11:20:29 INFO TaskSchedulerImpl: Removed TaskSet 15.0, whose tasks have all completed, from pool 
+24/11/09 11:20:29 INFO DAGScheduler: Job 12 is finished. Cancelling potential speculative or zombie tasks for this job
+24/11/09 11:20:29 INFO TaskSchedulerImpl: Killing all running tasks in stage 15: Stage finished
+24/11/09 11:20:29 INFO DAGScheduler: Job 12 finished: csv at NativeMethodAccessorImpl.java:0, took 0.066865 s
+24/11/09 11:20:29 INFO DAGScheduler: Registering RDD 44 (csv at NativeMethodAccessorImpl.java:0) as input to shuffle 3
+24/11/09 11:20:29 INFO DAGScheduler: Got map stage job 13 (csv at NativeMethodAccessorImpl.java:0) with 1 output partitions
+24/11/09 11:20:29 INFO DAGScheduler: Final stage: ShuffleMapStage 17 (csv at NativeMethodAccessorImpl.java:0)
+24/11/09 11:20:29 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 16)
+24/11/09 11:20:29 INFO DAGScheduler: Missing parents: List()
+24/11/09 11:20:29 INFO DAGScheduler: Submitting ShuffleMapStage 17 (MapPartitionsRDD[44] at csv at NativeMethodAccessorImpl.java:0), which has no missing parents
+24/11/09 11:20:29 INFO MemoryStore: Block broadcast_21 stored as values in memory (estimated size 49.6 KiB, free 433.6 MiB)
+24/11/09 11:20:29 INFO MemoryStore: Block broadcast_21_piece0 stored as bytes in memory (estimated size 22.5 KiB, free 433.6 MiB)
+24/11/09 11:20:29 INFO BlockManagerInfo: Added broadcast_21_piece0 in memory on 38e757416d68:34515 (size: 22.5 KiB, free: 434.2 MiB)
+24/11/09 11:20:29 INFO SparkContext: Created broadcast 21 from broadcast at DAGScheduler.scala:1585
+24/11/09 11:20:29 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 17 (MapPartitionsRDD[44] at csv at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+24/11/09 11:20:29 INFO TaskSchedulerImpl: Adding task set 17.0 with 1 tasks resource profile 0
+24/11/09 11:20:29 INFO BlockManagerInfo: Removed broadcast_20_piece0 on 38e757416d68:34515 in memory (size: 22.1 KiB, free: 434.2 MiB)
+24/11/09 11:20:29 INFO TaskSetManager: Starting task 0.0 in stage 17.0 (TID 26) (38e757416d68, executor driver, partition 0, NODE_LOCAL, 8988 bytes) 
+24/11/09 11:20:29 INFO Executor: Running task 0.0 in stage 17.0 (TID 26)
+24/11/09 11:20:29 INFO BlockManagerInfo: Removed broadcast_17_piece0 on 38e757416d68:34515 in memory (size: 22.2 KiB, free: 434.3 MiB)
+24/11/09 11:20:29 INFO BlockManagerInfo: Removed broadcast_16_piece0 on 38e757416d68:34515 in memory (size: 22.1 KiB, free: 434.3 MiB)
+24/11/09 11:20:29 INFO ShuffleBlockFetcherIterator: Getting 3 (870.0 B) non-empty blocks including 3 (870.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+24/11/09 11:20:29 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+24/11/09 11:20:29 INFO BlockManagerInfo: Removed broadcast_19_piece0 on 38e757416d68:34515 in memory (size: 22.1 KiB, free: 434.3 MiB)
+24/11/09 11:20:29 INFO BlockManagerInfo: Removed broadcast_15_piece0 on 38e757416d68:34515 in memory (size: 34.2 KiB, free: 434.3 MiB)
+24/11/09 11:20:29 INFO Executor: Finished task 0.0 in stage 17.0 (TID 26). 5316 bytes result sent to driver
+24/11/09 11:20:29 INFO TaskSetManager: Finished task 0.0 in stage 17.0 (TID 26) in 57 ms on 38e757416d68 (executor driver) (1/1)
+24/11/09 11:20:29 INFO TaskSchedulerImpl: Removed TaskSet 17.0, whose tasks have all completed, from pool 
+24/11/09 11:20:29 INFO DAGScheduler: ShuffleMapStage 17 (csv at NativeMethodAccessorImpl.java:0) finished in 0.115 s
+24/11/09 11:20:29 INFO DAGScheduler: looking for newly runnable stages
+24/11/09 11:20:29 INFO DAGScheduler: running: Set()
+24/11/09 11:20:29 INFO DAGScheduler: waiting: Set()
+24/11/09 11:20:29 INFO DAGScheduler: failed: Set()
+24/11/09 11:20:29 INFO ShufflePartitionsUtil: For shuffle(3), advisory target size: 67108864, actual target size 1048576, minimum partition size: 1048576
+24/11/09 11:20:29 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+24/11/09 11:20:29 INFO FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+24/11/09 11:20:29 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+24/11/09 11:20:29 INFO CodeGenerator: Code generated in 23.300075 ms
+24/11/09 11:20:29 INFO SparkContext: Starting job: csv at NativeMethodAccessorImpl.java:0
+24/11/09 11:20:29 INFO DAGScheduler: Got job 14 (csv at NativeMethodAccessorImpl.java:0) with 1 output partitions
+24/11/09 11:20:29 INFO DAGScheduler: Final stage: ResultStage 20 (csv at NativeMethodAccessorImpl.java:0)
+24/11/09 11:20:29 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 19)
+24/11/09 11:20:29 INFO DAGScheduler: Missing parents: List()
+24/11/09 11:20:29 INFO DAGScheduler: Submitting ResultStage 20 (MapPartitionsRDD[47] at csv at NativeMethodAccessorImpl.java:0), which has no missing parents
+24/11/09 11:20:29 INFO MemoryStore: Block broadcast_22 stored as values in memory (estimated size 247.0 KiB, free 433.9 MiB)
+24/11/09 11:20:29 INFO MemoryStore: Block broadcast_22_piece0 stored as bytes in memory (estimated size 92.4 KiB, free 433.8 MiB)
+24/11/09 11:20:30 INFO BlockManagerInfo: Added broadcast_22_piece0 in memory on 38e757416d68:34515 (size: 92.4 KiB, free: 434.3 MiB)
+24/11/09 11:20:30 INFO SparkContext: Created broadcast 22 from broadcast at DAGScheduler.scala:1585
+24/11/09 11:20:30 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 20 (MapPartitionsRDD[47] at csv at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+24/11/09 11:20:30 INFO TaskSchedulerImpl: Adding task set 20.0 with 1 tasks resource profile 0
+24/11/09 11:20:30 INFO TaskSetManager: Starting task 0.0 in stage 20.0 (TID 27) (38e757416d68, executor driver, partition 0, NODE_LOCAL, 8999 bytes) 
+24/11/09 11:20:30 INFO Executor: Running task 0.0 in stage 20.0 (TID 27)
+24/11/09 11:20:30 INFO ShuffleBlockFetcherIterator: Getting 1 (445.0 B) non-empty blocks including 1 (445.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+24/11/09 11:20:30 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 3 ms
+24/11/09 11:20:30 INFO CodeGenerator: Code generated in 22.391173 ms
+24/11/09 11:20:30 INFO CodeGenerator: Code generated in 18.781842 ms
+24/11/09 11:20:30 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+24/11/09 11:20:30 INFO FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+24/11/09 11:20:30 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+24/11/09 11:20:30 INFO FileOutputCommitter: Saved output of task 'attempt_202411091120292734946007383258299_0020_m_000000_27' to file:/app/output/output.txt/_temporary/0/task_202411091120292734946007383258299_0020_m_000000
+24/11/09 11:20:30 INFO SparkHadoopMapRedUtil: attempt_202411091120292734946007383258299_0020_m_000000_27: Committed. Elapsed time: 3 ms.
+24/11/09 11:20:30 INFO Executor: Finished task 0.0 in stage 20.0 (TID 27). 7662 bytes result sent to driver
+24/11/09 11:20:30 INFO TaskSetManager: Finished task 0.0 in stage 20.0 (TID 27) in 372 ms on 38e757416d68 (executor driver) (1/1)
+24/11/09 11:20:30 INFO TaskSchedulerImpl: Removed TaskSet 20.0, whose tasks have all completed, from pool 
+24/11/09 11:20:30 INFO DAGScheduler: ResultStage 20 (csv at NativeMethodAccessorImpl.java:0) finished in 0.451 s
+24/11/09 11:20:30 INFO DAGScheduler: Job 14 is finished. Cancelling potential speculative or zombie tasks for this job
+24/11/09 11:20:30 INFO TaskSchedulerImpl: Killing all running tasks in stage 20: Stage finished
+24/11/09 11:20:30 INFO DAGScheduler: Job 14 finished: csv at NativeMethodAccessorImpl.java:0, took 0.466640 s
+24/11/09 11:20:30 INFO FileFormatWriter: Start to commit write Job 703d7306-1389-4683-a853-aedc3c6d6110.
+24/11/09 11:20:30 INFO FileFormatWriter: Write Job 703d7306-1389-4683-a853-aedc3c6d6110 committed. Elapsed time: 23 ms.
+24/11/09 11:20:30 INFO FileFormatWriter: Finished processing stats for write job 703d7306-1389-4683-a853-aedc3c6d6110.
+24/11/09 11:20:30 INFO SparkContext: SparkContext is stopping with exitCode 0.
+24/11/09 11:20:30 INFO SparkUI: Stopped Spark web UI at http://38e757416d68:4040
+24/11/09 11:20:30 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+24/11/09 11:20:30 INFO MemoryStore: MemoryStore cleared
+24/11/09 11:20:30 INFO BlockManager: BlockManager stopped
+24/11/09 11:20:30 INFO BlockManagerMaster: BlockManagerMaster stopped
+24/11/09 11:20:30 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+24/11/09 11:20:30 INFO SparkContext: Successfully stopped SparkContext
+24/11/09 11:20:30 INFO ShutdownHookManager: Shutdown hook called
+24/11/09 11:20:30 INFO ShutdownHookManager: Deleting directory /tmp/spark-b33913ba-61dc-40a3-bf1e-e6ee9d943f6e
+24/11/09 11:20:30 INFO ShutdownHookManager: Deleting directory /tmp/spark-c0171c0d-8517-4834-b0fc-f7f366f722f1/pyspark-187a9ba2-cb32-41f8-ab49-10bc3eb549ed
+24/11/09 11:20:30 INFO ShutdownHookManager: Deleting directory /tmp/spark-c0171c0d-8517-4834-b0fc-f7f366f722f1

@@ -1,0 +1,2 @@
+2024/11/09 15:33:07|hover|Mens Cotton Jacket|1|55.99|products
+2024/11/09 15:33:07|mouse out|Mens Cotton Jacket|1|55.99|products
